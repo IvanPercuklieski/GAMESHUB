@@ -1,0 +1,36 @@
+.mainWrapper {
+    margin-inline: auto;
+    max-width: 1700px;
+    display: grid;
+    padding: 30px;
+    background-color: #ffffff;
+    color: black;
+    padding-top: 0px;
+}
+
+:root {
+    background-color: white;
+}
+
+
+
+@media(min-width: 1200px){
+    .mainWrapper {
+        gap: 2rem;
+        grid-template-columns: 7fr 3fr;
+    }
+}
+
+@media(max-width: 400px) {
+    .mainWrapper {
+        grid-template-columns: 1fr; 
+        padding: 10px; 
+    }
+
+
+    .mainContent, .sideBarContent {
+        width: 100%;
+    }
+}
+
+

@@ -1,0 +1,33 @@
+.gamesGrid {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-height: calc(4 * 220px);
+    padding-inline: 4px;
+    overflow-y: hidden
+}
+
+
+@media(max-width: 600px){
+    .gamesGrid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+    }
+}
+
+@media(max-width: 480px) {
+    .gamesGrid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))
+    }
+}
+
+
+.sectionTitle h1 {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding-left: 3px;
+    margin-top: 30px;
+    padding-bottom: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+

@@ -1,0 +1,41 @@
+.topTenCard img {
+    object-fit: cover;
+    height: 90px;
+    border-radius: 10px;
+    display: block;
+}
+
+
+
+
+.topTenCard {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px groove black;
+    width: 90%;
+}
+
+.topTenCard div:last-of-type{
+    margin-top: -15px;
+    height: 41px;
+    overflow: hidden;
+}
+
+.topTenCard {
+    margin-inline: auto;
+}
+
+@media(max-width: 450px){
+    .topTenCard img{
+        height: 70px;
+    }
+
+    .topTenCard{
+        gap: 5px
+    }
+}

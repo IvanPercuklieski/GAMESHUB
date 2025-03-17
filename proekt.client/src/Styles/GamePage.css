@@ -1,0 +1,27 @@
+.gamePageBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: darkgrey;
+}
+
+
+.gameBoxContainer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgrey;
+    padding: 20px;
+}
+
+.description {
+    width: 90%;
+    font-size: 1.2rem;
+    margin-top: 30px; 
+}
+
+irame{
+    border: none
+}
