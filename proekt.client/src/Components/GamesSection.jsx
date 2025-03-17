@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Styles/GamesSection.css";
 import GameCard from "../Components/GameCard";
-import img1 from '../assets/img1.jpg'
+import tempImg from '../assets/tempImg.jpg'
 
 function GamesSection({ secName}) {
     const [games, setGames] = useState([]); 
@@ -35,7 +35,7 @@ function GamesSection({ secName}) {
                 {games.slice().reverse().map((game, index) => (
                     <GameCard
                         key={index}
-                        thumbnail={img1}
+                        thumbnail={tempImg}
                         title={game.title}
                         description={game.description}
                         filePath={game.filePath}

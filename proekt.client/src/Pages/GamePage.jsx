@@ -4,7 +4,7 @@ import '../Styles/GamePage.css';
 
 function GamePage() {
     const location = useLocation();
-    const { gamePath, height, width, desc } = location.state || {};
+    const { gamePath, height, width, desc, name } = location.state || {};
 
     const game = `${gamePath}/index.html`;
     const h = `${height}px`;
@@ -15,17 +15,17 @@ function GamePage() {
             <Header />
 
             <div className="gamePageBody">
-                <div className="gameBoxContainer">
-                    <div className="gameBox">
-                        <iframe
-                            src={game}
-                            width={w}
-                            height={h}
-                            title="Embedded Html"
-                        />
-                    </div>
+                <div className="gamePageGame">
+                    <iframe src={game}
+                        height={h}
+                        width={w }>
+                    </iframe>
+                </div>
 
-                    <p className="description">{desc}</p>
+                <div className="gamePageText" style={{ maxWidth: `${w}` }}>
+                    <h1>{name}</h1>
+                    <button>Download Game</button>
+                    <p>{ desc}</p>
                 </div>
             </div>
         </>

@@ -1,27 +1,38 @@
 .gamePageBody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: darkgrey;
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+    background-color: aliceblue
 }
 
-
-.gameBoxContainer {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: darkgrey;
-    padding: 20px;
+.gamePageText{
+    justify-content: left;
+    width: 100%;
 }
 
-.description {
-    width: 90%;
-    font-size: 1.2rem;
-    margin-top: 30px; 
+.gamePageText h1{
+    display: inline-block
 }
 
-irame{
-    border: none
-}
+    .gamePageText button {
+        margin-top: 30px;
+        float: right;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 6px;
+        border: 2px solid black;
+        padding: 5px;
+        background-color: lightgray;
+        transition: transform 0.4s ease, transform 0.4s ease;
+    }
+
+
+        .gamePageText button:hover {
+            transform: scale(1.1)
+        }
+
+        .gamePageBody iframe{
+            border: none
+        }

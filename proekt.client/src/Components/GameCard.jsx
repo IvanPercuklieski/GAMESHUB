@@ -6,7 +6,7 @@ function GameCard({ thumbnail, description, title, filePath, h, w }) {
     const navigate = useNavigate();
 
     const handleNavigate = () => {
-        const data = { gamePath : filePath, height: h, width: w, desc: description}
+        const data = { gamePath : filePath, height: h, width: w, desc: description, name: title}
         navigate("/gamepage", {state: data})
     }
 
