@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../Components/Header"
+import '../Styles/LoginPage.css'
 
 function Login() {
     
@@ -19,7 +20,7 @@ function Login() {
     };
 
     const handleRegisterClick = () => {
-        navigate("/register");
+        navigate("/userregister");
     };
 
     const handleSubmit = async (e) => {
@@ -66,50 +67,50 @@ function Login() {
     return (
         <>
             <Header/>
-            <div className="containerbox">
-                <h3>Login</h3>
-                <form onSubmit={handleSubmit}>
-                    <div>
-                        <label className="forminput" htmlFor="email">Email:</label>
-                    </div>
-                    <div>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={email}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="password">Password:</label>
-                    </div>
-                    <div>
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            value={password}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div>
-                        <input
-                            type="checkbox"
-                            id="rememberme"
-                            name="rememberme"
-                            checked={rememberme}
-                            onChange={handleChange} />
-                        <span>Remember Me</span>
-                    </div>
-                    <div>
-                        <button type="submit">Login</button>
-                    </div>
-                    <div>
-                        <button type="button" onClick={handleRegisterClick}>Register</button>
-                    </div>
-                </form>
-                {error && <p className="error">{error}</p>}
+            <div className="loginMainBox">
+                <div className="containerBox">
+                    <h3>LOGIN</h3>
+                    <form onSubmit={handleSubmit}>
+                        <div>
+                            <label className="forminput" htmlFor="email">Email:</label>
+                        </div>
+                        <div>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={email}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="password">Password:</label>
+                        </div>
+                        <div>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                value={password}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div>
+                            <input
+                                type="checkbox"
+                                id="rememberme"
+                                name="rememberme"
+                                checked={rememberme}
+                                onChange={handleChange} />
+                            <span>Remember Me</span>
+                        </div>
+                        <div>
+                            <button type="submit">Login</button>
+                            <button type="button" onClick={handleRegisterClick}>Go to Register</button>
+                        </div>
+                    </form>
+                    {error && <p className="error">{error}</p>}
+                </div>
             </div>
         </>
     );

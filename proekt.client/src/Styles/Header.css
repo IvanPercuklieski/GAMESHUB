@@ -1,7 +1,7 @@
 .test {
     height: 70px;
     width: 100%;
-    background-color: gray;
+    background-color: darkgray;
     top: 0;
     z-index: 999;
     opacity: 0.95;
@@ -18,7 +18,7 @@
 .mainTest {
     height: 70px;
     width: 100%;
-    background-color: gray;
+    background-color: darkgray;
     top: 0;
     position: sticky;
     z-index: 999;

@@ -3,7 +3,7 @@ import "../Styles/GamesSection.css";
 import GameCard from "../Components/GameCard";
 import tempImg from '../assets/tempImg.jpg'
 
-function GamesSection({ secName}) {
+function GamesSection({ secName, fakeFeatured}) {
     const [games, setGames] = useState([]); 
 
     useEffect(() => {
@@ -32,18 +32,33 @@ function GamesSection({ secName}) {
                 <h1>{ secName}</h1>
             </div>
             <div className="gamesGrid">
-                {games.slice().reverse().map((game, index) => (
-                    <GameCard
-                        key={index}
-                        thumbnail={tempImg}
-                        title={game.title}
-                        description={game.description}
-                        filePath={game.filePath}
-                        h={game.gameHeight}
-                        w={game.gameWidth}
-                        thumbnail={game.coverPhotoPath }
-                    />
-                ))}
+                {fakeFeatured ?
+                    games.slice().map((game, index) => (
+                            <GameCard
+                                key={index}
+                                thumbnail={tempImg}
+                                title={game.title}
+                                description={game.description}
+                                filePath={game.filePath}
+                                h={game.gameHeight}
+                                w={game.gameWidth}
+                                thumbnail={game.coverPhotoPath}
+                            />
+                    )
+                ) :
+                    games.slice().reverse().map((game, index) => (
+                        <GameCard
+                            key={index}
+                            thumbnail={tempImg}
+                            title={game.title}
+                            description={game.description}
+                            filePath={game.filePath}
+                            h={game.gameHeight}
+                            w={game.gameWidth}
+                            thumbnail={game.coverPhotoPath}
+                        />
+                    ))
+                }
             </div>
         </div>
     );

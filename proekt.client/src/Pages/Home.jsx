@@ -12,6 +12,7 @@ function Home() {
             <div className="mainWrapper">
                 <div className="mainContent">
                     <GamesSection secName="Newest Games" />
+                    <GamesSection secName="Featured Games" fakeFeatured="fake"/>
                 </div>
 
                 <div className="sideBarContent">

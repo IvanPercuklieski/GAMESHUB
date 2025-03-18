@@ -1,0 +1,40 @@
+.loginMainBox{
+    display: grid;
+    place-items: center;
+}
+
+.containerBox {
+    padding: 20px;
+    margin: 50px;
+    border: 3px solid gray;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 8px 10px 5px rgb(0, 0, 0, 0.2);
+}
+
+.containerBox h3{
+    display: inline-block;
+    margin-inline: 75px
+}
+
+
+    .containerBox button {
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 6px;
+        border: 2px solid black;
+        padding: 5px;
+        background-color: lightgray;
+        transition: transform 0.4s ease, transform 0.4s ease;
+        margin: 20px;
+    }
+
+        .containerBox button:hover {
+            transform: scale(1.1)
+        }
+
+.containerBox div{
+    padding: 5px;
+}
